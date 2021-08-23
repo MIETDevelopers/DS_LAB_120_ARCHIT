@@ -4,8 +4,13 @@ int insert(int arr2[]);
 int delelement(int arr3[]);
 int main()  
 {
-    int arr1[50]; 
-    int ch;
+    int arr1[5]; 
+    int ch,i;
+    printf("Enter 5 elements of the array --> ");
+    for(i=0;i<5;i++)
+    {
+    	scanf("%d",&arr1[i]);
+	}
    do{
     printf("\"Select any option from below\"\n");
 	printf("1.Search an element from the Array\n");
@@ -37,23 +42,11 @@ int main()
 }
 	int search(int arr[])
 	{
-		int size,i,ele,found;
-		printf("\nEnter the size of the array : ");
-		scanf("%d",&size);
-		printf("\nEnter %d elements : ",size);
-		for(i=0;i<size;i++)
-		{
-			scanf("%d",&arr[i]);
-		}
-		printf("\nElements of Array are : ");
-		for(i=0;i<size;i++)
-		{
-			printf("%d ",arr[i]);
-		}
+		int i,ele,found;
 		printf("\nEnter the element that you want to search : ");
 		scanf("%d",&ele);
 		
-		for(i=0;i<size;i++)
+		for(i=0;i<5;i++)
 		{
 			if(arr[i]==ele)
 			{
@@ -72,18 +65,14 @@ int main()
 	
 	int insert(int arr2[])
 	{
-		int n,s,j;
-		printf("\nEnter the size of the Array : ");
-		scanf("%d",&s);
-			for(j=0;j<s;j++)
-		{
-			scanf("%d",&arr2[j]);
-		}
+		int n,j;
+		int s=5;
 		printf("\nArray before insertion of element : ");
 			for(j=0;j<s;j++)
 		{
 			printf("%d ",arr2[j]);
 		}
+		
 		printf("\nEnter the number that you want to insert in the Array at the End : ");
 		scanf("%d",&n);
 		s=s+1;
@@ -97,20 +86,16 @@ int main()
 	
 	int delelement(int arr3[])
 	{
-		int k,len,pos;
-		printf("Enter the size of the array : ");
-		scanf("%d",&len);
-		for(k=0;k<len;k++)
-		{
-			scanf("%d",&arr3[k]);
-		}
+		int k,pos;
+		int len=5;
 		printf("Array before deletion of elements : ");
 		for(k=0;k<len;k++)
 		{
 			printf("%d ",arr3[k]);
 		}
-		printf("\nEnter the Index from where you want to delete an element : ");
+		printf("\nEnter the Position from where you want to delete an element : ");
 		scanf("%d",&pos);
+		pos--;
 		len=len-1;
 		for(k=pos;k<len;k++)
 		{

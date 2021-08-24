@@ -22,7 +22,7 @@ int main()
     int ch;
     do
     {
-    printf("Single linked list operation\n");
+    printf("Doubly linked list operation\n");
     printf("1.Insert a Node\n");
     printf("2.Add at the beginning\n");
     printf("3.Add after a Node\n");
